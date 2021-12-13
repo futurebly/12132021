@@ -8,7 +8,12 @@
         }
     </style>
 </head>
-<body>
+<body onmousemove="
+    let r = Math.floor(Math.random()*255);
+    let g = Math.floor(Math.random()*255);
+    let b = Math.floor(Math.random()*255);
+    this.style.backgroundColor = 'rgb('+r+', '+g+', '+b+')';
+">
     <h1><a href="index.html">WEBPAGE</a></h1>
     <ol>
         <li><a href="1.html">html</a></li>
