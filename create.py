@@ -10,5 +10,9 @@ with sqlite3.connect('data.db') as connect:
     sql = 'INSERT INTO topics (title, body) VALUES(?,?)'
     cursor.execute(sql, (title, body))
 
+    cursor2 = connect.cursor()
+    sql = 'INSERT INTO topics (title, body) VALUES(?,?)'
+    cursor2.execute(sql, (title, body))
+
     print('id', cursor.lastrowid)
-    
+    print('id', cursor2.lastrowid)
